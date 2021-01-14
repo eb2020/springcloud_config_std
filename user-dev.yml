@@ -5,7 +5,7 @@ spring:
     name: microservice-user
   datasource:
     driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:sqlserver://localhost;DatabaseName=db_springboot
+    url: jdbc:sqlserver://localhost;DatabaseName=db_springboot_1
     username: sa
     password: sapwd_123
   jpa:

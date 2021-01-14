@@ -1,0 +1,30 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: microservice-user
+  datasource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost;DatabaseName=db_springboot
+    username: sa
+    password: sapwd_123
+  jpa:
+    show-sql: true #allow to show sql
+    hibernate:
+      dialect: org.hibernate.dialect.SQLServer2008Dialect
+      #ddl-auto: update
+      hbm2ddl:
+        auto: update #update/create/create-drop/validate
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka #,http://127.0.0.1:9999/eureka
+  instance:
+    prefer-ip-address: true # prefer to use ip address to register to eureka
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+
+
